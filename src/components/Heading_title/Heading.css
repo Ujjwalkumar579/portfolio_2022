@@ -1,0 +1,30 @@
+.page_heading {
+    padding: 50px 0px;
+}
+
+.page_heading h1 {
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-icon);
+    position: relative;
+    z-index: 1;
+}
+
+.page_heading h1::after {
+    content: attr(backText);
+    position: absolute;
+    color: var(--opacity-of-title);
+    /* color: red; */
+    font-size: 120px;
+    left: 50%;
+    top: 50%;
+    opacity: 0.5;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    letter-spacing: 9px;
+}
+
+.page_heading h1 span {
+    color: var(--main-primary-color)
+}

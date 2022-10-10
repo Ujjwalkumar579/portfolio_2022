@@ -1,0 +1,11 @@
+.about_page {
+    /* height: 100vh; */
+    background-color: var(--body-color);
+    position: relative;
+}
+
+.about_wrapper {
+    background-color: var(--body-color);
+    position: absolute;
+    top: 0;
+}

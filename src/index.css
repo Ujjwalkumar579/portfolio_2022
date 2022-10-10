@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    /* position: relative; */
+      width: 100vw;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--body-color);
+      /* cursor: none; */
+    }
+    
+    
+    .light_theme {
+      --body-color: #fff;
+      --main-primary-color: #ffb400;
+      --text-icon: #666;
+      --btn_arrow: #fff;
+      --opacity-of-nav-bg: rgba(75, 75, 75, 0.1);
+      --opacity-of-title: rgba(30, 37, 48, .2);
+    }
+    
+    .dark_theme {
+      --body-color: #111;
+      --main-primary-color: #ffb400;
+      --text-icon: #fff;
+      --opacity-of-nav-bg: rgba(75, 75, 75, 0.4);
+      --opacity-of-title: rgba(30, 37, 48, .9);
+    }
+    
+    button {
+      width: 250px;
+      height: 55px;
+      border-radius: 50px !important;
+      font-weight: 600;
+      border: 1px solid var(--main-primary-color);
+      background: transparent;
+      color: var(--text-icon);
+      letter-spacing: 0.5px;
+      text-transform: uppercase !important;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      padding: 0px 20px;
+      z-index: 100;
+      transition: color 0.5s all;
+    }
+    
+    button:hover {
+      color: var(--btn_arrow);
+      transition: color 0.5s all;
+    }
+    
+    button:hover .btn_arrow::before {
+      position: absolute;
+      width: 250px;
+      transition: 0.5s all ease;
+    }
+    
+    .btn_arrow {
+      background-color: var(--main-primary-color);
+      position: absolute;
+      height: 100%;
+      top: 0;
+      border-radius: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0;
+      transition: 0.5s all ease-in-out;
+      z-index: -1;
+      color: var(--btn_arrow);
+    }
+        .btn_arrow::before {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 100%;
+          background-color: var(--main-primary-color);
+          /* background-color: black; */
+          border-radius: 50px;
+          z-index: -1;
+          right: 0;
+          transition: 0.5s all ease;
+}
+
+.btn_arrow>.arrow_right {
+  font-size: 22px;
+}

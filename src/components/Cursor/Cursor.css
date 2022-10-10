@@ -1,0 +1,42 @@
+.cursor {
+    position: absolute;
+}
+
+.cursor-dot-outline {
+    z-index: 999;
+    display: block;
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 160, 1, 0.3);
+    transition: opacity 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
+    will-change: transform;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    top: 179px;
+    left: 479px;
+}
+
+.cursor-dot {
+    z-index: 999;
+    display: block;
+    position: fixed;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    pointer-events: none;
+    background-color: rgb(255, 160, 1);
+    transition: opacity 0.15s ease-in-out 0s, transform 0.25s ease-in-out 0s;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    top: 512px;
+    left: 633px;
+}
+
+/* .cursor-dot-outline {
+    width: 40px;
+    height: 40px;
+    background-color: #ffbb007c;
+} */
