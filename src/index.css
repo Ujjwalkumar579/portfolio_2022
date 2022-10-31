@@ -52,8 +52,19 @@ body {
       z-index: 100;
       transition: color 0.5s all;
     }
+
+    button > a
+    {
+      color: var(--text-icon);
+      text-decoration: none;
+    }
     
     button:hover {
+      color: var(--btn_arrow);
+      transition: color 0.5s all;
+    }
+
+    button > a:hover {
       color: var(--btn_arrow);
       transition: color 0.5s all;
     }

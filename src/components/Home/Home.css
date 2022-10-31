@@ -73,11 +73,17 @@
 .portfolio_display_img {
     position: relative;
     height: 550px;
-    background: url(../../assets/portfolio.jpg) no-repeat;
     background-position: top;
     background-size: cover;
     border-radius: 30px;
     box-shadow: 0px 0px 12px 2px #000;
+    overflow: hidden;
+}
+
+.portfolio_display_img > img
+{
+    height: 100%;
+    object-fit: cover;
 }
 
 .content_display {
@@ -163,7 +169,8 @@
 
     .mobile_view_img img {
         position: absolute;
-        width: 100%;
+        /* width: 100%; */
+        object-fit: cover;
         height: 100%;
         border-radius: 50%;
         background-position: center;
@@ -199,6 +206,12 @@
     .content_display button {
         margin: 0 auto;
     }
+
+    .content_display > button > a
+    {
+        color: #fff;
+    }
+
 
     .icon_menu {
         flex-direction: row;

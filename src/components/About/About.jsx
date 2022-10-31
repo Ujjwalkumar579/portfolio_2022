@@ -9,143 +9,14 @@ import { BsFillBriefcaseFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 import "react-circular-progressbar/dist/styles.css";
+import {personal_info_card_view,personal_info_list_view,skill_data,edu_exp_data} from '../data.js';
+import resume from '../../img/Resume-ujjwal kumar.pdf';
 import "./About.css";
 const About = ({ themeSwitch }) => {
-  const personal_info_card_view = [
-    {
-      num: "01",
-      titile: `year of experience`,
-    },
-    {
-      num: "07",
-      titile: "completed porjects",
-    },
-    {
-      num: "03",
-      titile: "happy customers",
-    },
-    {
-      num: "01",
-      titile: "awards won",
-    },
-  ];
 
-  const personal_info_list_view = [
-    {
-      label: "first name",
-      text_value: "ujjwal",
-    },
-    {
-      label: "last name",
-      text_value: "kumar",
-    },
-    {
-      label: "age",
-      text_value: "26",
-    },
-    {
-      label: "nationality",
-      text_value: "ujjwal",
-    },
-    {
-      label: "freelance",
-      text_value: "indian",
-    },
-    {
-      label: "address",
-      text_value: "gaya",
-    },
-    {
-      label: "phone",
-      text_value: "+919155227703",
-    },
-    {
-      label: "email",
-      text_value: "ujjwal",
-    },
-    {
-      label: "skype",
-      text_value: "ujjwal.kumar579@gmail.com",
-    },
-    {
-      label: "langages",
-      text_value: "english, hindi",
-    },
-  ];
-
-  const skill_data = [
-    {
-      skill_percentage: 25,
-      skill_titile: "html",
-    },
-    {
-      skill_percentage: 89,
-      skill_titile: "javascript",
-    },
-    {
-      skill_percentage: 70,
-      skill_titile: "css",
-    },
-    {
-      skill_percentage: 66,
-      skill_titile: "bootstrap",
-    },
-    {
-      skill_percentage: 95,
-      skill_titile: "wordpress",
-    },
-    {
-      skill_percentage: 50,
-      skill_titile: "jquery",
-    },
-    {
-      skill_percentage: 65,
-      skill_titile: "react",
-    },
-    {
-      skill_percentage: 35,
-      skill_titile: "illustrator",
-    },
-  ];
-
-  const edu_exp_data = [
-    {
-      edu_exp_year: "2012",
-      edu_exp_degree: "Secondary School ",
-      edu_exp_org: "baridih high school, jamshedpur",
-      edu_exp_desc: "",
-    },
-    {
-      edu_exp_year: "2015",
-      edu_exp_degree: "Higher Secondary ",
-      edu_exp_org: "a.m college, gaya",
-      edu_exp_desc: "",
-    },
-    {
-      edu_exp_year: "2018",
-      edu_exp_degree: "bachelor degree",
-      edu_exp_org: "gaya college, gaya",
-      edu_exp_desc: "",
-    },
-    {
-      edu_exp_year: "2020",
-      edu_exp_degree: "web development Certificate",
-      edu_exp_org: "arena animation, ranchi",
-      edu_exp_desc: "",
-    },
-    {
-      edu_exp_year: "2021",
-      edu_exp_degree: "UI Developer",
-      edu_exp_org: "indev consultancy pvt. ltd, delhi",
-      edu_exp_desc: "",
-    },
-    {
-      edu_exp_year: "2022 - Present",
-      edu_exp_degree: "full stack development",
-      edu_exp_org: "newton school",
-      edu_exp_desc: "",
-    },
-  ];
+  const open_pdf = () =>{
+    window.open(resume);
+  }
 
   return (
     <div className="about_page">
@@ -190,7 +61,7 @@ const About = ({ themeSwitch }) => {
                             );
                           })}
                         </ul>
-                        <button>
+                        <button onClick={open_pdf}>
                           <span>download cv</span>
                           <span className="btn_arrow">
                             <FaDownload className="arrow_right" />
@@ -233,6 +104,7 @@ const About = ({ themeSwitch }) => {
                       <div className="col-lg-3 col-md-6 col-6 mt-5">
                         <div className="skills_bar">
                           <CircularProgressbar
+                          key={i}
                             value={val.skill_percentage}
                             text={`${val.skill_percentage}%`}
                             strokeWidth={8}

@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { HiHome, HiMailOpen } from "react-icons/hi";
 import { FaUserAlt } from "react-icons/fa";
-import { SiGooglechat } from "react-icons/si";
 import "./Menus.css";
 import { Link } from "react-router-dom";
 import { Mycontext } from "../../App";
@@ -22,7 +21,7 @@ const Menus = () => {
                 className={
                   location.pathname === "/" ? "icon_box active" : "icon_box"
                 }
-                menuName="home"
+                menuname="home"
               >
                 <HiHome className="icons" />
               </li>
@@ -34,7 +33,7 @@ const Menus = () => {
                     ? "icon_box active"
                     : "icon_box"
                 }
-                menuName="about"
+                menuname="about"
               >
                 <FaUserAlt className="icons" />
               </li>
@@ -46,7 +45,7 @@ const Menus = () => {
                     ? "icon_box active"
                     : "icon_box"
                 }
-                menuName="portfolio"
+                menuname="portfolio"
               >
                 <BsFillBriefcaseFill className="icons" />
               </li>
@@ -58,21 +57,21 @@ const Menus = () => {
                     ? "icon_box active"
                     : "icon_box"
                 }
-                menuName="contact"
+                menuname="contact"
               >
                 <HiMailOpen className="icons" />
               </li>
             </Link>
-            <Link to="/blog">
+            {/* <Link to="/blog">
               <li
                 className={
                   location.pathname === "/blog" ? "icon_box active" : "icon_box"
                 }
-                menuName="blog"
+                menuname="blog"
               >
                 <SiGooglechat className="icons" />
               </li>
-            </Link>
+            </Link> */}
           </ul>
         </header>
       </div>

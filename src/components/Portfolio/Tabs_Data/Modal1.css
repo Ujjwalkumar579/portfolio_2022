@@ -1,3 +1,6 @@
-.pro_details span svg {
-    color: red;
+
+.preview_details span:nth-child(2) > a
+{
+    text-decoration: underline #fff;
+    font-weight: 600;
 }

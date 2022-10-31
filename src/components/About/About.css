@@ -12,18 +12,6 @@
     --bs-gutter-x: 24px
 }
 
-.about_container_row {
-    /* width: 100%; */
-    /* height: 100vh; */
-}
-
-.about_wrapper {
-    /* height: 100vh;
-    width: 100vw; */
-}
-
-
-
 .personal_infos_heading h1 {
     color: var(--text-icon)
 }
@@ -155,9 +143,6 @@
     font-size: 20px !important;
 }
 
-.skills_bar {
-    /* padding: 70px; */
-}
 
 .skill_title {
     color: var(--text-icon);

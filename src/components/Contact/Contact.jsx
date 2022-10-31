@@ -4,33 +4,15 @@ import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 import Animation from "../WelcomeAnimation/Animation";
 import { motion } from "framer-motion";
 import { Col, Container, Row } from "react-bootstrap";
-import { FaMapMarkedAlt, FaPhoneSquareAlt, FaLinkedinIn } from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
+import {FaLinkedinIn } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { IoIosSend } from "react-icons/io";
-
+import {address_data} from '../data.js'
 import Heading from "../Heading_title/Heading";
 import "./Contact.css";
 const Contact = ({ themeSwitch }) => {
-  const address_data = [
-    {
-      icon: <FaMapMarkedAlt />,
-      address_title: "address point",
-      address_desc:
-        "123 Stree New York City , United States Of America 750065.",
-    },
-    {
-      icon: <GrMail />,
-      address_title: "mail me",
-      address_desc: "ujjwal.kumar579@gmail.com",
-    },
-    {
-      icon: <FaPhoneSquareAlt />,
-      address_title: "call me",
-      address_desc: "+919155227703",
-    },
-  ];
+
   return (
     <div className="contact pb-5 mb-5">
       <ThemeSwitcher />
@@ -57,7 +39,7 @@ const Contact = ({ themeSwitch }) => {
                 <div className="row mb-4 p-lg-5 pt-0">
                   <div className="col-lg-4 contact_left">
                     <div className="">
-                      <h3>don't be shy</h3>
+                      <h3>Contact Me</h3>
                       <p>
                         Feel free to get in touch with me. I am always open to
                         discussing new projects, creative ideas or opportunities
@@ -80,13 +62,33 @@ const Contact = ({ themeSwitch }) => {
 
                       <ul className="social_icons">
                         <li>
-                          <BsGithub />
+                          <a
+                            href="https://github.com/Ujjwalkumar579"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <BsGithub />
+                          </a>
                         </li>
+
                         <li>
-                          <FaLinkedinIn />
+                          <a
+                            href="https://www.linkedin.com/in/ujjwal-kumar-991135129/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <FaLinkedinIn />
+                          </a>{" "}
                         </li>
+
                         <li>
-                          <SiLeetcode />
+                          <a
+                            href="https://leetcode.com/ujjwal_kumar579/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <SiLeetcode />
+                          </a>
                         </li>
                       </ul>
                     </div>

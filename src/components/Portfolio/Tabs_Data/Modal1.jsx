@@ -1,5 +1,5 @@
 import React, { memo, useContext } from "react";
-// import "./Modal1.css";
+import "./Modal1.css";
 import { FaUserAlt } from "react-icons/fa";
 import { AiFillProject } from "react-icons/ai";
 import Modal from "react-bootstrap/Modal";
@@ -8,7 +8,7 @@ const Modal1 = (props) => {
   // console.log(props);
 
   const {showData} = useContext(Mycontext);
-  console.log(showData);
+  // console.log(showData);
 
   return (
     <div>
@@ -62,7 +62,11 @@ const Modal1 = (props) => {
                     <FaUserAlt />
                   </span>
                   <span>
-                    Preview : <span>{showData.preview}</span>
+                    Preview :{" "}
+                    <a href={showData.preview} target="blank">
+                      {" "}
+                      <span> Click to View </span>
+                    </a>
                   </span>
                 </div>
               </div>

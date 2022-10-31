@@ -1,11 +1,12 @@
 import React from "react";
-import heroImg from "../../assets/portfolio_mobile.jpg";
+import heroImg from "../../assets/home4.jpg";
 import { TiArrowRightThick } from "react-icons/ti";
 import Menus from "../menus/Menus";
 import "./Home.css";
 import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 import { motion } from "framer-motion";
 import Animation from "../WelcomeAnimation/Animation";
+import { Link } from "react-router-dom";
 const Home = ({ themeSwitch }) => {
   return (
     <div className="home_page">
@@ -27,7 +28,9 @@ const Home = ({ themeSwitch }) => {
             transition={{ duration: 1.2 }}
           >
             <div className="col-lg-4 img_display">
-              <div className="portfolio_display_img"></div>
+              <div className="portfolio_display_img">
+                <img src={heroImg} alt="" className="img-fluid" />
+              </div>
               <div className="mobile_view_img d-lg-block d-xl-none">
                 <img src={heroImg} alt="" className="img-fluid" />
               </div>
@@ -44,10 +47,13 @@ const Home = ({ themeSwitch }) => {
                   lives of those around me.
                 </p>
                 <button>
-                  <span>More about me</span>
-                  <span className="btn_arrow">
-                    <TiArrowRightThick className="arrow_right" />
-                  </span>
+                  <a href="https://www.linkedin.com/in/ujjwal-kumar-991135129/" target="blank">
+                    {" "}
+                    <span>More about me</span>
+                    <span className="btn_arrow">
+                      <TiArrowRightThick className="arrow_right" />
+                    </span>
+                  </a>
                 </button>
               </div>
             </div>

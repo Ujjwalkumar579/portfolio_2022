@@ -39,10 +39,6 @@
     color: #fff;
 }
 
-.port_thumbnail {
-    /* margin: 10px 0px 5px 0px; */
-}
-
 .tab-pane.active {
     background-color: transparent !important;
 }
