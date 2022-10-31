@@ -6,7 +6,7 @@ import "./Home.css";
 import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 import { motion } from "framer-motion";
 import Animation from "../WelcomeAnimation/Animation";
-const Home = () => {
+const Home = ({ themeSwitch }) => {
   return (
     <div className="home_page">
       {/*--------theme Switch--------*/}
@@ -16,7 +16,7 @@ const Home = () => {
       {/*------Animation component------*/}
 
       <div className="home_wrapper">
-        <Animation />
+        <Animation themeSwitch={themeSwitch} />
         <div className="conatiner-fluid">
           <div className="yellow_strap_bg d-none d-lg-block d-xl-block"></div>
           <motion.div

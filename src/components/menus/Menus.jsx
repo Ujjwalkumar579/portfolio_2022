@@ -5,12 +5,12 @@ import { FaUserAlt } from "react-icons/fa";
 import { SiGooglechat } from "react-icons/si";
 import "./Menus.css";
 import { Link } from "react-router-dom";
-import { contextForTheme } from "../../App";
+import { Mycontext } from "../../App";
 
 //////////////////////////////////////////////////////////   Component Part ///////////////////////////////////////////////
 
 const Menus = () => {
-  const { location } = useContext(contextForTheme);
+  const { location } = useContext(Mycontext);
 
   return (
     <div>

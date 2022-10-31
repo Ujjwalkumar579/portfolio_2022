@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Menus from "../menus/Menus";
@@ -6,23 +7,29 @@ import Animation from "../WelcomeAnimation/Animation";
 import { motion } from "framer-motion";
 import "./Portfolio.css";
 import Heading from "../Heading_title/Heading";
-import { useInView } from "react-intersection-observer";
-const Portfolio = () => {
-  const [ref, inView] = useInView();
-  console.log(ref.current);
+import { dataForPortoflio } from "../data.js";
+import AllShow from "./Tabs_Data/AllShow";
 
-  const portfolio_data = [
-    {
-      thumbnail:
-        "https://i.postimg.cc/ZnwR1mrR/F1-Qy-TMQFRt-WOKq-Bk1-i2-Tg-3ed3a16f907a45e98aa6499568522be1-Firefox-Screenshot-2022-10-05-T15-11-57-528-Z.png",
-      hover_text: "website",
-    },
-  ];
+
+// import Sonnet from '../../components/Sonnet';
+
+const Portfolio = ({ themeSwitch }) => {
+  // const [modalShow, setModalShow] = useState(false);
+  // const [showData, setShowData] = useState({
+  //   hover_text: "",
+  //   thumbnail: "",
+  //   type: "",
+  // });
+  // const clickHandler = (val) => {
+  //   setShowData(val);
+  //   setModalShow(true);
+  // };
+
   return (
     <div className="portfolio">
       <ThemeSwitcher />
       <Menus />
-      <Animation />
+      <Animation themeSwitch={themeSwitch} />
 
       <motion.div
         className="portfolio_wrapper"
@@ -45,47 +52,14 @@ const Portfolio = () => {
                   <div className="tab_wrapper">
                     <div className="col-lg-12 text-center tab_button">
                       <div className="tab_menu">
-                        <ul>
-                          <li>
-                            <button>All</button>
-                          </li>
-                          <li>
-                            <button>Logo</button>
-                          </li>
-                          <li>
-                            <button>Video</button>
-                          </li>
-                          <li>
-                            <button>Graphics design</button>
-                          </li>
-                          <li>
-                            <button>mockup</button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                        <AllShow
+                          dataForPortoflio={dataForPortoflio}
+                          // clickHandler={clickHandler}
+                          // modalShow={modalShow}
+                          // setModalShow={setModalShow}
+                          // showData={showData}
+                        />
 
-                    <div className="col-lg-12">
-                      <div className="container">
-                        <div className="row">
-                          {portfolio_data.map((val, i) => {
-                            return (
-                              <div className="col-lg-4 bg-primary">
-                                <div className="port_card">
-                                  <div className="port_thumbnail">
-                                    <img
-                                      src={val.thumbnail}
-                                      alt=""
-                                      width="50%"
-                                      className="img-fluid"
-                                      height="100px"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                            );
-                          })}
-                        </div>
                       </div>
                     </div>
                   </div>

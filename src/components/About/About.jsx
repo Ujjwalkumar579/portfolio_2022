@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 import "react-circular-progressbar/dist/styles.css";
 import "./About.css";
-const About = () => {
+const About = ({ themeSwitch }) => {
   const personal_info_card_view = [
     {
       num: "01",
@@ -152,7 +152,7 @@ const About = () => {
       <ThemeSwitcher />
       <Menus />
 
-      <Animation />
+      <Animation themeSwitch={themeSwitch} />
 
       <motion.div
         className="about_wrapper"

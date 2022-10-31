@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { IoMdSunny } from "react-icons/io";
 import { IconContext } from "react-icons/lib";
 import { BsMoonStarsFill } from "react-icons/bs";
-import { contextForTheme } from "../../App";
+import { Mycontext } from "../../App";
 
 const ThemeSwitcher = () => {
-  const { themeSwitch, themeChangeHandler } = useContext(contextForTheme);
+  const { themeSwitch, themeChangeHandler } = useContext(Mycontext);
   return (
     <label className="theme_switcher_label" onClick={themeChangeHandler}>
       <div className="switches">

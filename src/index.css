@@ -13,10 +13,10 @@ body {
       background-color: var(--body-color);
       /* cursor: none; */
     }
-    
+
     
     .light_theme {
-      --body-color: #fff;
+      --body-color: rgb(241, 239, 239);
       --main-primary-color: #ffb400;
       --text-icon: #666;
       --btn_arrow: #fff;
@@ -25,6 +25,7 @@ body {
     }
     
     .dark_theme {
+      /* --body-color: #111; */
       --body-color: #111;
       --main-primary-color: #ffb400;
       --text-icon: #fff;
@@ -93,4 +94,7 @@ body {
 
 .btn_arrow>.arrow_right {
   font-size: 22px;
+}
+::selection {
+  background: #ffb400;
 }

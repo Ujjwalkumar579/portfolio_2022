@@ -3,7 +3,7 @@
     /* height: 100vh; */
     background-color: var(--body-color);
     position: relative;
-    padding: 10px 25px;
+    padding: 10px 25px 130px 25px;
 }
 
 .tab_menu ul {
@@ -33,4 +33,100 @@
 .tab_menu ul li button:hover {
     color: #ffb400;
     transition: 0.5 all ease;
+}
+.nav-item>button {
+    padding: 10px 0px !important;
+    color: #fff;
+}
+
+.port_thumbnail {
+    /* margin: 10px 0px 5px 0px; */
+}
+
+.tab-pane.active {
+    background-color: transparent !important;
+}
+
+.port_card {
+    margin: 15px;
+    position: relative;
+}
+
+.port_thumbnail {
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s all ease-in-out;
+}
+
+.port_thumbnail::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s all ease-in-out;
+    transform: scale(0.2);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.port_thumbnail:hover::after {
+    content: attr(data-hover);
+    transform: scale(1);
+    background-color: var(--main-primary-color) !important;
+    transition: 0.4s all ease-in-out;
+    color: #fff;
+}
+
+.modal-header {
+    border-bottom: 0px;
+}
+
+.modal-content {
+    background-color: rgb(61, 61, 61);
+    /* color: var(--main-primary-color); */
+}
+
+.modal-header h1 {
+    color: #ffb400;
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.pro_details,
+.client_details,
+.preview_details,
+.lang_details {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.pro_details span,
+.client_details span,
+.preview_details span,
+.lang_details span {
+    color: #fff;
+}
+
+.pro_details span>span,
+.client_details span>span,
+.preview_details span>span,
+.lang_details span>span {
+    font-weight: 600;
+}
+
+.pro_details span svg,
+.client_details span svg,
+.lang_details span svg,
+.preview_details span svg {
+    color: #ffb400;
+    margin-bottom: 5px;
 }

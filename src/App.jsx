@@ -8,12 +8,23 @@ import Home from "./components/Home/Home";
 import Contact from "./components/Contact/Contact";
 import Blog from "./components/Blog/Blog";
 import { AnimatePresence } from "framer-motion";
-export const contextForTheme = createContext();
+
+export const Mycontext = createContext();
 const App = () => {
   // theme switch state
   const [themeSwitch, setThemeSwitch] = useState(false);
 
-  // const [backToHome, setBackToHome] = useState("");
+    const [modalShow, setModalShow] = useState(false);
+    const [showData, setShowData] = useState({
+      hover_text: "",
+      thumbnail: "",
+      type: "",
+    });
+    const clickHandler = (val) => {
+      setShowData(val);
+      setModalShow(true);
+    };
+
 
   //theme change handler
   const themeChangeHandler = () => {
@@ -30,29 +41,35 @@ const App = () => {
     });
   }, []);
 
+
+
   return (
-    <contextForTheme.Provider
+    <Mycontext.Provider
       value={{
         themeSwitch: themeSwitch,
         setThemeSwitch: setThemeSwitch,
         themeChangeHandler: themeChangeHandler,
         location: location,
+        clickHandler : clickHandler,
+        modalShow : modalShow,
+        setModalShow : setModalShow,
+        showData : showData
       }}
     >
       {/* <Cursor /> */}
       <div className={themeSwitch ? "light_theme" : "dark_theme"}>
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Home themeSwitch={themeSwitch} />} />
 
-            <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/about" element={<About themeSwitch={themeSwitch} />} />
+            <Route path="/portfolio" element={<Portfolio themeSwitch={themeSwitch} />} />
+            <Route path="/contact" element={<Contact themeSwitch={themeSwitch} />} />
+            <Route path="/blog" element={<Blog themeSwitch={themeSwitch} />} />
           </Routes>
         </AnimatePresence>
       </div>
-    </contextForTheme.Provider>
+    </Mycontext.Provider>
   );
 };
 

@@ -2,7 +2,7 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(31, 31, 31);
+    /* background-color: #2b2b2b; */
     top: 0;
     left: 0;
     z-index: 1001;
