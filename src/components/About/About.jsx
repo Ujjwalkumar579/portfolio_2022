@@ -38,7 +38,7 @@ const About = ({ themeSwitch }) => {
               <Container>
                 <Row className="text-center">
                   <Col>
-                    <Heading word1="About" word2="me" backText="resume" />
+                    <Heading word1="About" word2="me" backtext="resume" />
                   </Col>
                 </Row>
 
@@ -101,10 +101,9 @@ const About = ({ themeSwitch }) => {
 
                   {skill_data.map((val, i) => {
                     return (
-                      <div className="col-lg-3 col-md-6 col-6 mt-5">
+                      <div className="col-lg-3 col-md-6 col-6 mt-5" key={i}>
                         <div className="skills_bar">
                           <CircularProgressbar
-                          key={i}
                             value={val.skill_percentage}
                             text={`${val.skill_percentage}%`}
                             strokeWidth={8}
@@ -137,19 +136,19 @@ const About = ({ themeSwitch }) => {
                       {edu_exp_data.reverse().map((val, i) => {
                         return (
                           <li key={i}>
-                            <div class="icon">
+                            <div className="icon">
                               <BsFillBriefcaseFill />
                             </div>
-                            <span class="time open-sans-font text-uppercase">
+                            <span className="time open-sans-font text-uppercase">
                               {val.edu_exp_year}
                             </span>
-                            <h5 class="poppins-font text-uppercase">
+                            <h5 className="poppins-font text-uppercase">
                               {val.edu_exp_degree}
-                              <span class="place open-sans-font">
+                              <span className="place open-sans-font">
                                 {val.edu_exp_org}
                               </span>
                             </h5>
-                            <p class="open-sans-font">{val.edu_exp_desc}</p>
+                            <p className="open-sans-font">{val.edu_exp_desc}</p>
                           </li>
                         );
                       })}

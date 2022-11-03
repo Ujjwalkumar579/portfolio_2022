@@ -108,3 +108,7 @@
         padding-bottom: 50px;
     }
 }
+
+.Toastify__progress-bar {
+    background-color: var(--main-primary-color);
+}

@@ -44,7 +44,7 @@ const Portfolio = ({ themeSwitch }) => {
               <div className="container">
                 <div className="row">
                   <div className="col-lg-12">
-                    <Heading word1="my" word2="portfolio" backText="works" />
+                    <Heading word1="my" word2="portfolio" backtext="works" />
                   </div>
                 </div>
 
