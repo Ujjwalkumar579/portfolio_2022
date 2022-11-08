@@ -41,7 +41,7 @@ const Home = ({ themeSwitch }) => {
                   <span>i'm ujjwal kumar.</span> <span>web developer</span>
                 </h1>
                 <p>
-                  I'm a Tunisian based web designer & front‑end developer
+                  I'm a Indian based web designer & front‑end developer
                   focused on crafting clean & user‑friendly experiences, I am
                   passionate about building excellent software that improves the
                   lives of those around me.

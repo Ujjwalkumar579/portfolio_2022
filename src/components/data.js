@@ -236,15 +236,15 @@ export const personal_info_list_view = [
   },
   {
     label: "nationality",
-    text_value: "ujjwal",
+    text_value: "Indian",
   },
   {
     label: "freelance",
-    text_value: "indian",
+    text_value: "Available",
   },
   {
     label: "address",
-    text_value: "gaya",
+    text_value: "gaya, (Bihar)",
   },
   {
     label: "phone",
@@ -252,10 +252,10 @@ export const personal_info_list_view = [
   },
   {
     label: "email",
-    text_value: "ujjwal",
+    text_value: "ujjwal.kumar57p@gmail.com",
   },
   {
-    label: "skype",
+    label: "LinkedIn",
     text_value: "ujjwal.kumar579@gmail.com",
   },
   {
